@@ -21,6 +21,7 @@ GameObject(canvas, nombre, nombre_fichero, x, y, speed)
     - move_right()
     - scale_up()
     - scale_down()
+    - draw()
     - set_image_from_file(nombre_fichero_png)
     - set_image_from_url(url_fichero_png) # Puede no funcionar con algunos formatos.
 
@@ -28,10 +29,10 @@ GameObject(canvas, nombre, nombre_fichero, x, y, speed)
     - bg
     - spaceship_1
     - spaceship_2
-
+---
 <img width="902" height="652" alt="image" src="https://github.com/user-attachments/assets/36dd7d68-e849-426a-841c-54202032765c" />
 
-
+--- 
 <img width="902" height="652" alt="image" src="https://github.com/user-attachments/assets/c8e4030a-d839-4b10-bbe8-ae7ad5859d03" />
 
 
