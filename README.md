@@ -23,6 +23,7 @@ GameObject(canvas, nombre, nombre_fichero, x, y, speed)
     - scale_down()
     - set_image(nombre_fichero_png)
 
-### Inicialmente existen los objetos
+### Inicialmente existen los objetos siguientes:
     - spaceship_1
     - spaceship_2
+
