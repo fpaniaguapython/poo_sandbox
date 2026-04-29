@@ -32,6 +32,7 @@ GameObject(canvas, nombre, nombre_fichero, x, y, speed)
 <img width="902" height="652" alt="image" src="https://github.com/user-attachments/assets/36dd7d68-e849-426a-841c-54202032765c" />
 
 
-<img width="1127" height="815" alt="image" src="https://github.com/user-attachments/assets/7c86e989-104f-4208-b853-285ac7d9f8cf" />
+<img width="902" height="652" alt="image" src="https://github.com/user-attachments/assets/c8e4030a-d839-4b10-bbe8-ae7ad5859d03" />
+
 
 
