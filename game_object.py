@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
+import urllib.request
 
 class GameObject:
     def __init__(self, canvas, name, image, x, y, speed):
@@ -13,8 +14,20 @@ class GameObject:
         except tk.TclError:
             messagebox.showerror("Error", f"No se pudo encontrar el archivo en ./images/{image}")    
 
-    def set_image(self, image):
+    def set_image_from_file(self, image):
         self.image = self.image = tk.PhotoImage(file=f"./images/{image}")
+
+    def set_image_from_url(self, url):
+        """Descarga una imagen desde una URL y la asigna al objeto."""
+        try:
+            # Descargamos los datos de la imagen
+            with urllib.request.urlopen(url) as response:
+                data = response.read()
+            # Creamos el PhotoImage usando el parámetro 'data' en lugar de 'file'
+            self.image = tk.PhotoImage(data=data)
+            
+        except Exception as e:
+            messagebox.showerror("Error de Red", f"No se pudo cargar la imagen desde la URL:\n{e}")
 
     def draw(self):
         self.canvas.create_image(self.x, self.y, image=self.image, anchor=tk.NW)
