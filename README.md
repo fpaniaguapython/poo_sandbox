@@ -21,3 +21,5 @@ GameObject(canvas, nombre, nombre_fichero, x, y, speed)
     - move_right()
     - scale_up()
     - scale_down()
+
+<img width="902" height="652" alt="image" src="https://github.com/user-attachments/assets/6b04d0f2-e1c1-4fb1-adf7-378cc0ca46a2" />
