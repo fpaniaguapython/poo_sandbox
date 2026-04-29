@@ -13,6 +13,9 @@ class GameObject:
         except tk.TclError:
             messagebox.showerror("Error", f"No se pudo encontrar el archivo en ./images/{image}")    
 
+    def set_image(self, image):
+        self.image = self.image = tk.PhotoImage(file=f"./images/{image}")
+
     def draw(self):
         self.canvas.create_image(self.x, self.y, image=self.image, anchor=tk.NW)
 
