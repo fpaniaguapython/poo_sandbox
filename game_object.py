@@ -7,7 +7,7 @@ class GameObject:
         try:
             self.canvas = canvas
             self.name = name
-            self.image = tk.PhotoImage(file=f"./images/{image}")
+            self.__image = tk.PhotoImage(file=f"./images/{image}")
             self.x = x
             self.y = y
             self.speed = speed
