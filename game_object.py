@@ -15,7 +15,7 @@ class GameObject:
             messagebox.showerror("Error", f"No se pudo encontrar el archivo en ./images/{image}")    
 
     def set_image_from_file(self, image):
-        self.image = tk.PhotoImage(file=f"./images/{image}")
+        self.__image = tk.PhotoImage(file=f"./images/{image}")
 
     def set_image_from_url(self, url):
         """Descarga una imagen desde una URL y la asigna al objeto."""
@@ -24,13 +24,13 @@ class GameObject:
             with urllib.request.urlopen(url) as response:
                 data = response.read()
             # Creamos el PhotoImage usando el parámetro 'data' en lugar de 'file'
-            self.image = tk.PhotoImage(data=data)
+            self.__image = tk.PhotoImage(data=data)
             
         except Exception as e:
             messagebox.showerror("Error de Red", f"No se pudo cargar la imagen desde la URL:\n{e}")
 
     def draw(self):
-        self.canvas.create_image(self.x, self.y, image=self.image, anchor=tk.NW)
+        self.canvas.create_image(self.x, self.y, image=self.__image, anchor=tk.NW)
 
     def move_forward(self):
         self.y -= self.speed
@@ -46,12 +46,12 @@ class GameObject:
 
     def scale_up(self):
         """Duplica el tamaño de la imagen actual (2x)."""
-        self.image = self.image.zoom(2, 2)
+        self.__image = self.__image.zoom(2, 2)
         # Nota: Esto aumenta los píxeles, puede verse pixelado.
 
     def scale_down(self):
         """Reduce a la mitad el tamaño de la imagen actual (1/2)."""
-        self.image = self.image.subsample(2, 2)
+        self.__image = self.__image.subsample(2, 2)
 
     def __repr__(self):
         return f"{self.name}:{self.x}:{self.y}"
