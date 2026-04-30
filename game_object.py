@@ -15,7 +15,7 @@ class GameObject:
             messagebox.showerror("Error", f"No se pudo encontrar el archivo en ./images/{image}")    
 
     def set_image_from_file(self, image):
-        self.image = self.image = tk.PhotoImage(file=f"./images/{image}")
+        self.image = tk.PhotoImage(file=f"./images/{image}")
 
     def set_image_from_url(self, url):
         """Descarga una imagen desde una URL y la asigna al objeto."""

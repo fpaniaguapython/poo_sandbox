@@ -8,7 +8,7 @@ def draw_scene():
     canvas.delete("all")
     for game_object in game_objects:
         game_object.draw()
-        show_game_objects_info()
+    show_game_objects_info()
     
 def show_game_objects_info():
     output_text.config(state=tk.NORMAL)
@@ -91,7 +91,7 @@ btn_execute = tk.Button(right_frame, text="Ejecutar", command=execute_code, bg="
 btn_execute.pack(fill=tk.X, pady=5)
 
 # Creación de objetos del juego
-bg = GameObject(canvas, 'Background', 'bg.png', 0, 0, 0)
+bg = GameObject(canvas, 'bg', 'bg.png', 0, 0, 0)
 spaceship_1 = GameObject(canvas, 'spaceship_1', 'spaceship.png', 100, 100, 1)
 spaceship_2 = GameObject(canvas, 'spaceship_2', 'spaceship.png', 200, 200, 1)
 game_objects.append(bg)
